@@ -1,6 +1,8 @@
 package miu.edu.eaproject.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,8 +11,8 @@ public class Application {
     @GeneratedValue
     private int id;
     private int resumeVersion;
-
-    @OneToOne( cascade = CascadeType.PERSIST)
+    @JsonProperty(value = "job")
+    @OneToOne( cascade = CascadeType.ALL)
     private Job job;
 
     public Application(int resumeVersion,Job job) {
@@ -23,9 +25,6 @@ public class Application {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getResumeVersion() {
         return resumeVersion;

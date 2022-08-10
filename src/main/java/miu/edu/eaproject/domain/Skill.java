@@ -15,8 +15,6 @@ public class Skill {
     private String description;
     private String language;
 
-    @ManyToOne()
-    private Job job;
 
     public Skill() {
 

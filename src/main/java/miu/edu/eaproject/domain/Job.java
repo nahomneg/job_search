@@ -13,10 +13,7 @@ public class Job {
     private int id;
     private String title;
     private double salary;
-
-
-    @OneToOne(mappedBy = "job")
-    private Application application;
+    
 
     @OneToOne
     private ScreeningInterview screeningInterview;
@@ -27,7 +24,7 @@ public class Job {
     @OneToOne
     private TechnicalInterview technicalInterview;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "job")
+    @OneToMany(cascade = CascadeType.ALL)
     private Set<Skill> skills = new HashSet<>();
 
     public Job(String title, double salary, ScreeningInterview screeningInterview, TechnicalInterview technicalInterview, HiringManagerInterview hiringManagerInterview) {
