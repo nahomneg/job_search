@@ -28,7 +28,7 @@ public class ScreeningInterview extends Interview {
         this.name = name;
     }
 
-    public boolean isResult() {
+    public boolean getResult() {
         return result;
     }
 

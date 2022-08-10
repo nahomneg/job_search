@@ -7,7 +7,7 @@ import javax.persistence.OneToMany;
 import java.util.List;
 
 @Entity
-public class Company {
+public abstract class Company {
     @Id
     @GeneratedValue
     private int id;

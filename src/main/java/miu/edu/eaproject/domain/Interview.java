@@ -6,7 +6,7 @@ import javax.persistence.Id;
 
 import java.time.LocalDate;
 @Entity
-public class Interview {
+public abstract class Interview {
     @GeneratedValue
     @Id
     private int id;
